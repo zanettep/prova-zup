@@ -17,17 +17,35 @@ module.exports = {
                 .setValue('@campoConsultarProduto', [produto, client.Keys.ENTER])
     },
 
-    verificarResultadoConsulta: (produto, qtdProdutoEsperado) => {
+    verificarConsultaProdutoEncontrado: (produto, qtdProdutoEsperado) => {
 
         home
             .expect
-            .elements('@cardProduto')
-            .count.to.equal(parseInt(qtdProdutoEsperado));
+            .element('@cardProduto')
+            .to.have.property('title')
+            .equals(produto);
 
         return home
                 .expect
-                .element('@cardProduto')
-                .to.have.property('title')
-                .equals(produto);
+                .elements('@cardProduto')
+                .count.to.equal(parseInt(qtdProdutoEsperado));
+    },
+
+    verificarConsultaProdutoNaoEncontrado: (mensagem1, mensagem2, qtdProdutoEsperado) => {
+
+        home
+            .expect
+            .element('@mensagemNaoEncontrado1')
+            .text.to.equal(mensagem1);
+        
+        home
+            .expect
+            .element('@mensagemNaoEncontrado2')
+            .text.to.equal(mensagem2);
+    
+        return home
+                .expect
+                .elements('@cardProduto')
+                .count.to.equal(parseInt(qtdProdutoEsperado));
     }
 }

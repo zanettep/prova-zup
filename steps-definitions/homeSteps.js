@@ -14,5 +14,10 @@ When('preencho consulto um produto {string}', (produto) => {
 
 Then('o produto consultado deve ser apresentado {string} {string}', (produto, qtdProdutoEsperado) => {
 
-    return homeActions.verificarResultadoConsulta(produto, qtdProdutoEsperado);
+    return homeActions.verificarConsultaProdutoEncontrado(produto, qtdProdutoEsperado);
+});
+
+Then('duas mensagens informando que o produto consultado não foi encontrado devem ser apresentadas {string} {string} {string}', (mensagem1, mensagem2, qtdProdutoEsperado) => {
+
+    return homeActions.verificarConsultaProdutoNaoEncontrado(mensagem1, mensagem2, qtdProdutoEsperado);
 });
