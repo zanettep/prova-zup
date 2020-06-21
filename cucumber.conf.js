@@ -10,7 +10,8 @@ BeforeAll(async () => {
 
 After(() => client.execute(`
     localStorage.clear();
-    sessionStorage.clear();`)
+    sessionStorage.clear();`
+    ).deleteCookies().refresh()
 );
 
 AfterAll(async () => {

@@ -6,3 +6,8 @@ Then('o produto selecionado deve ser apresentado na sacola {string} {string}', (
 
     return sacolaActions.verificarProdutoAdicionado(produto, qtdProdutoEsperado);
 });
+
+Then('uma mensagem informando que a sacola está vazia deve ser apresentada {string}', (mensagem) => {
+
+    return sacolaActions.verificarSacolaVazia(mensagem);
+});

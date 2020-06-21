@@ -8,5 +8,11 @@ module.exports = {
 
         return produto
                 .click('@botaoAdicionarSacola');
+    },
+
+    clicarBotaoSacola: () => {
+
+        return produto
+                .click('@botaoSacola');
     }
 }

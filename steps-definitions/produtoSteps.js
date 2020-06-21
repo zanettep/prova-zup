@@ -6,3 +6,8 @@ When('no botão Adicionar à sacola', () => {
 
     return produtoActions.clicarBotaoAdicionarSacola();
 });
+
+When('clico no botão Sacola', () => {
+
+    return produtoActions.clicarBotaoSacola();
+});
