@@ -12,6 +12,11 @@ When('preencho consulto um produto {string}', (produto) => {
     return homeActions.consultarProduto(produto);
 });
 
+When('clico no produto apresentado', () => {
+
+    return homeActions.clicarCardProduto();
+});
+
 Then('o produto consultado deve ser apresentado {string} {string}', (produto, qtdProdutoEsperado) => {
 
     return homeActions.verificarConsultaProdutoEncontrado(produto, qtdProdutoEsperado);

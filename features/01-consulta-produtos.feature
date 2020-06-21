@@ -6,8 +6,8 @@ Contexto:
 
 Esquema do Cenário: Consultar produto com sucesso
 
-  Quando preencho consulto um produto "<produto>"
-  Então o produto consultado deve ser apresentado "<produto>" "<qtd-produto-esperado>"
+    Quando preencho consulto um produto "<produto>"
+    Então o produto consultado deve ser apresentado "<produto>" "<qtd-produto-esperado>"
 
 Exemplos:
 | produto                                    | qtd-produto-esperado |
@@ -15,8 +15,8 @@ Exemplos:
 
 Esquema do Cenário: Consultar produto não cadastrado
 
-  Quando preencho consulto um produto "<produto>"
-  Então duas mensagens informando que o produto consultado não foi encontrado devem ser apresentadas "<mensagem1>" "<mensagem2>" "<qtd-produto-esperado>"
+    Quando preencho consulto um produto "<produto>"
+    Então duas mensagens informando que o produto consultado não foi encontrado devem ser apresentadas "<mensagem1>" "<mensagem2>" "<qtd-produto-esperado>"
 
 Exemplos:
 | produto  | mensagem1                                               | mensagem2                                               | qtd-produto-esperado |
