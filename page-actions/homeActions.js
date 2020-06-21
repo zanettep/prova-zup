@@ -17,6 +17,12 @@ module.exports = {
                 .setValue('@campoConsultarProduto', [produto, client.Keys.ENTER])
     },
 
+    clicarCardProduto: () => {
+
+        return home
+                .click('@cardProduto');
+    },
+
     verificarConsultaProdutoEncontrado: (produto, qtdProdutoEsperado) => {
 
         home
