@@ -14,7 +14,7 @@ module.exports = {
     consultarProduto: (produto) => {
 
         return home
-                .setValue('@campoConsultarProduto', [produto, client.Keys.ENTER])
+                .setValue('@campoConsultarProduto', [produto, client.Keys.ENTER]);
     },
 
     clicarCardProduto: () => {

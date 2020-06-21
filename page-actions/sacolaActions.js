@@ -15,5 +15,13 @@ module.exports = {
                 .expect
                 .elements('@itemListaSacola')
                 .count.to.equal(parseInt(qtdProdutoEsperado));
+    },
+
+    verificarSacolaVazia: (mensagem) => {
+
+        return sacola
+                .expect
+                .element('@mensagemSacolaVazia')
+                .text.to.equal(mensagem);
     }
 }
